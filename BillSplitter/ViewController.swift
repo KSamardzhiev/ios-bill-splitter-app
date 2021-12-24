@@ -9,9 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .regular)
+        ]
+        segmentControl.setTitleTextAttributes(titleTextAttributes, for:.selected)
+        
+        let titleTextAttributes1 = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .regular)
+        ]
+        segmentControl.setTitleTextAttributes(titleTextAttributes1, for:.normal)
     }
 
 
