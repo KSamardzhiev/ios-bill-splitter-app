@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F827237127774EAE00C3A1BA /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827237027774EAE00C3A1BA /* ResultViewController.swift */; };
+		F8272373277750F500C3A1BA /* SplitBillBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8272372277750F500C3A1BA /* SplitBillBrain.swift */; };
 		F858A1A92776086E00D8DB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858A1A82776086E00D8DB97 /* AppDelegate.swift */; };
 		F858A1AB2776086E00D8DB97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858A1AA2776086E00D8DB97 /* SceneDelegate.swift */; };
-		F858A1AD2776086E00D8DB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858A1AC2776086E00D8DB97 /* ViewController.swift */; };
+		F858A1AD2776086E00D8DB97 /* SplitBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F858A1AC2776086E00D8DB97 /* SplitBillViewController.swift */; };
 		F858A1B02776086E00D8DB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F858A1AE2776086E00D8DB97 /* Main.storyboard */; };
 		F858A1B32776086E00D8DB97 /* BillSplitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F858A1B12776086E00D8DB97 /* BillSplitter.xcdatamodeld */; };
 		F858A1B52776087200D8DB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F858A1B42776087200D8DB97 /* Assets.xcassets */; };
@@ -37,10 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F827237027774EAE00C3A1BA /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F8272372277750F500C3A1BA /* SplitBillBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBillBrain.swift; sourceTree = "<group>"; };
 		F858A1A52776086E00D8DB97 /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F858A1A82776086E00D8DB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F858A1AA2776086E00D8DB97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F858A1AC2776086E00D8DB97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F858A1AC2776086E00D8DB97 /* SplitBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBillViewController.swift; sourceTree = "<group>"; };
 		F858A1AF2776086E00D8DB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F858A1B22776086E00D8DB97 /* BillSplitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BillSplitter.xcdatamodel; sourceTree = "<group>"; };
 		F858A1B42776087200D8DB97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,9 +93,18 @@
 		F827236F2777448A00C3A1BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F858A1AC2776086E00D8DB97 /* ViewController.swift */,
+				F858A1AC2776086E00D8DB97 /* SplitBillViewController.swift */,
+				F827237027774EAE00C3A1BA /* ResultViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F8272374277750FC00C3A1BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8272372277750F500C3A1BA /* SplitBillBrain.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F858A19C2776086E00D8DB97 = {
@@ -119,6 +132,7 @@
 			children = (
 				F858A1A82776086E00D8DB97 /* AppDelegate.swift */,
 				F858A1AA2776086E00D8DB97 /* SceneDelegate.swift */,
+				F8272374277750FC00C3A1BA /* Model */,
 				F827236E2777447E00C3A1BA /* View */,
 				F827236F2777448A00C3A1BA /* Controller */,
 				F858A1B42776087200D8DB97 /* Assets.xcassets */,
@@ -277,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F858A1AD2776086E00D8DB97 /* ViewController.swift in Sources */,
+				F827237127774EAE00C3A1BA /* ResultViewController.swift in Sources */,
+				F858A1AD2776086E00D8DB97 /* SplitBillViewController.swift in Sources */,
 				F858A1A92776086E00D8DB97 /* AppDelegate.swift in Sources */,
 				F858A1AB2776086E00D8DB97 /* SceneDelegate.swift in Sources */,
+				F8272373277750F500C3A1BA /* SplitBillBrain.swift in Sources */,
 				F858A1B32776086E00D8DB97 /* BillSplitter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Split Bill View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplitBillViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,6 +67,9 @@
                                                 </segments>
                                                 <color key="tintColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="selectedSegmentTintColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="segmentChaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="11N-mR-UWp"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Split:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAK-fs-n3P">
                                                 <rect key="frame" x="0.0" y="116.00000000000003" width="328" height="50"/>
@@ -86,8 +89,11 @@
                                                         <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="leading" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="UBC-Vc-PjD">
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="leading" contentVerticalAlignment="center" value="2" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="UBC-Vc-PjD">
                                                         <rect key="frame" x="234" y="0.0" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E4x-pL-Thc"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -109,9 +115,12 @@
                                 </constraints>
                                 <color key="tintColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Calculate">
+                                <buttonConfiguration key="configuration" style="gray" title="Calculate" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKA-Pb-IvL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,19 +138,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="numberOfPeopleLabel" destination="yb0-13-XRK" id="9Va-Ua-Jc0"/>
                         <outlet property="segmentControl" destination="O1W-9k-vz5" id="N8u-Fq-noW"/>
+                        <outlet property="textField" destination="xRl-pv-zro" id="2Jw-J5-Axt"/>
+                        <segue destination="TyT-kZ-ntw" kind="presentation" identifier="goToResult" id="C5f-9f-scR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="72.991071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="u0a-pg-hwx">
             <objects>
-                <viewController id="TyT-kZ-ntw" sceneMemberID="viewController">
+                <viewController id="TyT-kZ-ntw" customClass="ResultViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hS1-Uh-gka">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-QT-dGz">
@@ -174,6 +186,17 @@
                                 <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mny-Ig-RH4">
+                                <rect key="frame" x="114" y="773" width="200" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ahG-8T-Jf1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Recalculate" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q28-pG-5JM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -181,13 +204,19 @@
                             <constraint firstItem="uLm-QT-dGz" firstAttribute="top" secondItem="hS1-Uh-gka" secondAttribute="top" id="2Hw-DM-Jyp"/>
                             <constraint firstItem="uLm-QT-dGz" firstAttribute="leading" secondItem="hS1-Uh-gka" secondAttribute="leading" id="5ds-WB-FjH"/>
                             <constraint firstAttribute="trailing" secondItem="TVs-3X-vzK" secondAttribute="trailing" constant="50" id="Bju-DH-20F"/>
+                            <constraint firstItem="Q28-pG-5JM" firstAttribute="bottom" secondItem="Mny-Ig-RH4" secondAttribute="bottom" constant="10" id="GaA-ZS-mee"/>
                             <constraint firstItem="TVs-3X-vzK" firstAttribute="leading" secondItem="hS1-Uh-gka" secondAttribute="leading" constant="50" id="aAB-Tx-yXo"/>
                             <constraint firstAttribute="top" secondItem="uLm-QT-dGz" secondAttribute="bottom" constant="-250" id="g1I-OE-r6P"/>
                             <constraint firstAttribute="trailing" secondItem="uLm-QT-dGz" secondAttribute="trailing" id="kEf-km-fQp"/>
                             <constraint firstItem="TVs-3X-vzK" firstAttribute="centerX" secondItem="hS1-Uh-gka" secondAttribute="centerX" id="t8U-wh-DQ0"/>
                             <constraint firstItem="TVs-3X-vzK" firstAttribute="top" secondItem="uLm-QT-dGz" secondAttribute="bottom" constant="10" id="uAS-vJ-TIz"/>
+                            <constraint firstItem="Mny-Ig-RH4" firstAttribute="centerX" secondItem="hS1-Uh-gka" secondAttribute="centerX" id="xxG-1R-oPP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="TVs-3X-vzK" id="qio-U4-O6L"/>
+                        <outlet property="resultLabel" destination="3kh-Jq-iJM" id="Azx-KR-ww5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wu-fL-3Im" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
