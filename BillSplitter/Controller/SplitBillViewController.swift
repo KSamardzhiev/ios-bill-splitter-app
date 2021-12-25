@@ -20,7 +20,13 @@ class SplitBillViewController: UIViewController {
         prepareSegmentUI()
         splitBillBrain.setTipIndex(segmentControl.selectedSegmentIndex)
         splitBillBrain.setPeopleCount(Double(numberOfPeopleLabel.text!)!)
-
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func segmentChaged(_ sender: UISegmentedControl) {

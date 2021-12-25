@@ -196,6 +196,9 @@
                                     <fontDescription key="titleFontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="30"/>
                                     <color key="baseForegroundColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="TyT-kZ-ntw" eventType="touchUpInside" id="hYp-q5-Dnl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q28-pG-5JM"/>

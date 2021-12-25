@@ -23,7 +23,10 @@ class ResultViewController: UIViewController {
         descriptionLabel.text = "Split between \(people) people, with \(tip)% tip"
     }
     
-
+    @IBAction func recalculatePressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
