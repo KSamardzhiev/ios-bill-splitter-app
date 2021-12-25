@@ -136,6 +136,63 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="72.991071428571431"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="u0a-pg-hwx">
+            <objects>
+                <viewController id="TyT-kZ-ntw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hS1-Uh-gka">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-QT-dGz">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbE-la-k5v">
+                                        <rect key="frame" x="77.666666666666686" y="50" width="273" height="54"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="40"/>
+                                        <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="47.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-Jq-iJM">
+                                        <rect key="frame" x="154" y="134" width="120" height="67.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="50"/>
+                                        <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="UbE-la-k5v" firstAttribute="centerX" secondItem="uLm-QT-dGz" secondAttribute="centerX" id="5N0-tk-5FN"/>
+                                    <constraint firstItem="3kh-Jq-iJM" firstAttribute="centerX" secondItem="uLm-QT-dGz" secondAttribute="centerX" id="QH3-pQ-TpX"/>
+                                    <constraint firstItem="UbE-la-k5v" firstAttribute="top" secondItem="uLm-QT-dGz" secondAttribute="top" constant="50" id="aBc-aI-9Ux"/>
+                                    <constraint firstItem="3kh-Jq-iJM" firstAttribute="top" secondItem="UbE-la-k5v" secondAttribute="bottom" constant="30" id="bGL-aX-ntb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 3 people, with 10% tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVs-3X-vzK">
+                                <rect key="frame" x="50" y="260" width="328" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q28-pG-5JM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uLm-QT-dGz" firstAttribute="top" secondItem="hS1-Uh-gka" secondAttribute="top" id="2Hw-DM-Jyp"/>
+                            <constraint firstItem="uLm-QT-dGz" firstAttribute="leading" secondItem="hS1-Uh-gka" secondAttribute="leading" id="5ds-WB-FjH"/>
+                            <constraint firstAttribute="trailing" secondItem="TVs-3X-vzK" secondAttribute="trailing" constant="50" id="Bju-DH-20F"/>
+                            <constraint firstItem="TVs-3X-vzK" firstAttribute="leading" secondItem="hS1-Uh-gka" secondAttribute="leading" constant="50" id="aAB-Tx-yXo"/>
+                            <constraint firstAttribute="top" secondItem="uLm-QT-dGz" secondAttribute="bottom" constant="-250" id="g1I-OE-r6P"/>
+                            <constraint firstAttribute="trailing" secondItem="uLm-QT-dGz" secondAttribute="trailing" id="kEf-km-fQp"/>
+                            <constraint firstItem="TVs-3X-vzK" firstAttribute="centerX" secondItem="hS1-Uh-gka" secondAttribute="centerX" id="t8U-wh-DQ0"/>
+                            <constraint firstItem="TVs-3X-vzK" firstAttribute="top" secondItem="uLm-QT-dGz" secondAttribute="bottom" constant="10" id="uAS-vJ-TIz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wu-fL-3Im" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894.3925233644859" y="78.401727861771064"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

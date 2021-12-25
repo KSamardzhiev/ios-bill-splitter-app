@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        prepareSegmentUI()
+    }
+    
+    func prepareSegmentUI() {
         let titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .regular)
