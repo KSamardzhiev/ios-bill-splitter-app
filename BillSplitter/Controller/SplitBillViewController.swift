@@ -20,6 +20,7 @@ class SplitBillViewController: UIViewController {
         prepareSegmentUI()
         splitBillBrain.setTipIndex(segmentControl.selectedSegmentIndex)
         splitBillBrain.setPeopleCount(Double(numberOfPeopleLabel.text!)!)
+
     }
     
     @IBAction func segmentChaged(_ sender: UISegmentedControl) {
